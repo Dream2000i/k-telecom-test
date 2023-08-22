@@ -2,7 +2,7 @@
     padding: 52px 0 9px;
     &__container {
         padding-left: 20px;
-        padding-right: 0;
+        padding-right: 10px;
     }
     .container {
     }
@@ -28,9 +28,12 @@
     .owl-dots {
         display: none;
     }
+    .owl-item.blured   {
+        opacity: 0.3;
+    }
     .tariff {
         height: 100%;
-
+        
         padding: 15px 15px 25px;
         &__wrapper {
             padding: 30px;
@@ -120,6 +123,11 @@
 
         }
     }
+    @media (max-width: 768px) {
+        .owl-item.blured   {
+            opacity: 1;
+        }
+    }
     @media (max-width: 576px) {
 
         padding-top: 4px;
@@ -128,7 +136,7 @@
             margin-bottom: 14px;
         }
         &__container {
-            padding-left: 0;
+            padding-left: 10px;
         }
         &__wrapper {
             padding: 0;
@@ -136,7 +144,7 @@
         .tariff {
             padding: 5px 5px 38px;
             &__wrapper {
-                padding: 20px;
+                padding: 10px;
             }
             &__name {
                 margin-bottom: 6px;

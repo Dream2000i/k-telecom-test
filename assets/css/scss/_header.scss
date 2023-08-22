@@ -19,6 +19,10 @@
         background: url(../images/burger.svg) no-repeat center;
         // display: none;
         margin-left: auto;
+        display: block;
+        * {
+            pointer-events: none;
+        }
     }
     .burger-btn {
     }

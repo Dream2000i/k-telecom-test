@@ -99,10 +99,10 @@ $form = get_field('form') ?? '';
 										<?= $note  ?>
 									</div>
 								<?php } ?>
-								<label	el class="tariff__selected">
+								<label el class="tariff__selected">
 									<input type="radio" name="tariff" value="<?= $name  ?>" class="tariff__select-input">
 									<div class="tariff__btn-selected btn btn_blue"><span>Тариф</span>выбран</div>
-									<div class="tariff__btn btn">Выбрать <span>тариф</span></div>	
+									<div class="tariff__btn btn">Выбрать <span>тариф</span></div>
 								</label>
 							</div>
 
@@ -112,13 +112,16 @@ $form = get_field('form') ?? '';
 			</div>
 		</section>
 	<?php } ?>
-	<?php if ($form) { ?>
+	<?php if ($form) {
+		$objectCf7 =  wpcf7_contact_form($form);
+		$shortcode = $objectCf7->shortcode();
+	?>
 		<section class="form-block">
 			<div class="form-block__container container">
 				<div class="form-block__wrapper">
 					<h2 class="form-block__title">Подключиться просто!</h2>
 					<div class="form-block__form form">
-						<?= do_shortcode($form); ?>
+						<?= do_shortcode($shortcode) ?>
 					</div>
 
 				</div>
